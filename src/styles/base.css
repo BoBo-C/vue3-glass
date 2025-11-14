@@ -1,0 +1,33 @@
+:root {
+  --glass-tint: 255, 255, 255;
+  --glass-opacity-light: 0.24;
+  --glass-opacity-dark: 0.3;
+  --glass-blur: 20px;
+  --glass-saturate: 180%;
+  --glass-brightness: 1.08;
+  --glass-contrast: 0.86;
+  --glass-radius: 16px;
+  --glass-border-color: 255, 255, 255;
+  --glass-border-opacity: 0.4;
+  --glass-highlight-opacity: 0.6;
+  --glass-shadow-ambient: 0 6px 20px rgba(0, 0, 0, 0.12);
+  --glass-noise-opacity: 0.03;
+  --glass-noise-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGElEQVQ4T2NkwAIYBaNgFIwCjYFIMAo2BUFADp0BDG/ZH70AAAAASUVORK5CYII=');
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-tint: 24, 24, 28;
+    --glass-opacity-light: 0.32;
+    --glass-opacity-dark: 0.38;
+    --glass-border-opacity: 0.25;
+    --glass-highlight-opacity: 0.45;
+    --glass-shadow-ambient: 0 8px 24px rgba(0, 0, 0, 0.24);
+    --glass-noise-opacity: 0.04;
+  }
+}
+
+.glass {
+  --glass-filter: blur(var(--glass-blur, 20px)) saturate(var(--glass-saturate, 180%)) contrast(var(--glass-contrast, 0.86))
+    brightness(var(--glass-brightness, 1.08));
+}
